@@ -1,5 +1,7 @@
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class ProductModel {
   String? id;
  String? name;
@@ -20,9 +22,9 @@ class ProductModel {
   });
 
   ProductModel.fromDocumentSnapshot(
-      Map<String, dynamic> data) {
+    DocumentSnapshot data) {
     
-    id=data["id"];
+    id=data.id;
     name = data["name"];
     nameInMalayam = data["nameInMalayam"];
     price = data["price"];
@@ -31,5 +33,5 @@ class ProductModel {
     isStock = data['isStock'];
   }
 
-  static fromMap(Map<String, dynamic> data) {}
+  
 }

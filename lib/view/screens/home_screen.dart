@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:naasco_mart/utlis/app_constants.dart';
 import 'package:naasco_mart/view/screens/profile.dart';
 
-import '../home_page_body.dart';
+import '../widgets/home_page_body.dart';
 import '../widgets/appbar.dart';
 
 class HomePage extends StatefulWidget {

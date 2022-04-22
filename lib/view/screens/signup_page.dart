@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:naasco_mart/controller/auth_controller.dart';
+import 'package:naasco_mart/utlis/controllers.dart';
 import 'package:naasco_mart/view/screens/login_screen.dart';
 import 'package:naasco_mart/view/widgets/button_widget.dart';
-
 import '../../utlis/app_constants.dart';
 import '../widgets/texts.dart';
 
@@ -12,9 +12,7 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      
-     var emailController = TextEditingController();
-    var passwordController = TextEditingController();
-    var nameController = TextEditingController();
+     
 
     return Scaffold(
       body: Column(
@@ -39,7 +37,7 @@ class SignupPage extends StatelessWidget {
                   ]),
                   child: TextFormField(
                     cursorColor: AppColor.mainColor,
-                    controller: nameController,
+                    controller: authController.name,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(left: 15, right: 15),
                       hintText: "Name",
@@ -72,7 +70,7 @@ class SignupPage extends StatelessWidget {
                     ]),
                     child: TextFormField(
                       cursorColor: AppColor.mainColor,
-                      controller: emailController,
+                      controller: authController.email,
                       decoration: InputDecoration(
                         prefixIcon: Icon(
                           Icons.email,
@@ -116,7 +114,7 @@ class SignupPage extends StatelessWidget {
                   child: TextFormField(
                     obscureText: true,
                     cursorColor: AppColor.mainColor,
-                    controller: passwordController,
+                    controller: authController.password,
                     decoration: InputDecoration(
                       prefixIcon: Icon(
                         Icons.lock,
@@ -153,9 +151,13 @@ class SignupPage extends StatelessWidget {
           ),
           ButtonWidget(
             voidCallback: () {AuthController.instance.register(
-                emailController.text.trim(),
-                passwordController.text.trim(),
-                nameController.text.trim());},
+                // emailController.text.trim(),
+                // passwordController.text.trim(),
+                // nameController.text.trim()
+                // 
+                );
+                
+                },
           
             text: "Signup",
           ),

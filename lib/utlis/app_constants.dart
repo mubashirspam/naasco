@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:logger/logger.dart';
 class AppColor {
   static final Color mainColor = const Color(0xFF77B86C);
   static final Color textColor = const Color(0xFF484848);
@@ -21,3 +21,6 @@ class AppColor {
     )
   ];
 }
+
+
+Logger logger = Logger();

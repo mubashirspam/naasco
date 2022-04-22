@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:naasco_mart/controller/auth_controller.dart';
 import 'package:naasco_mart/utlis/app_constants.dart';
+import 'package:naasco_mart/utlis/controllers.dart';
 import 'package:naasco_mart/view/screens/signup_page.dart';
 import 'package:naasco_mart/view/widgets/button_widget.dart';
 import 'package:naasco_mart/view/widgets/texts.dart';
 
-class LoginPage extends StatelessWidget{
-  
-
-
-  
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var emailController = TextEditingController();
-    var passwordController = TextEditingController();
-     
+    
+
     return Scaffold(
       // backgroundColor: AppColor.mainColor,
       body: Container(
@@ -33,9 +29,6 @@ class LoginPage extends StatelessWidget{
                 padding: EdgeInsets.all(50),
                 child: Column(
                   children: [
-
-
-                    
                     Padding(
                       padding: const EdgeInsets.only(bottom: 50),
                       child: Container(
@@ -51,7 +44,7 @@ class LoginPage extends StatelessWidget{
                         ),
                         child: TextFormField(
                           cursorColor: AppColor.mainColor,
-                          controller: emailController,
+                          controller: authController.email,
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.email,
@@ -89,7 +82,7 @@ class LoginPage extends StatelessWidget{
                       ]),
                       child: TextFormField(
                         cursorColor: AppColor.mainColor,
-                        controller: passwordController,
+                        controller: authController.password,
                         decoration: InputDecoration(
                           prefixIcon: Icon(
                             Icons.lock,
@@ -118,14 +111,10 @@ class LoginPage extends StatelessWidget{
                 ),
               ),
               ButtonWidget(
-                 voidCallback: () {
-                  AuthController.instance.login(emailController.text.trim(),
-                      passwordController.text.trim());
+                voidCallback: () {
+                  AuthController.instance.login();
                 },
-               
-                
                 text: "Login",
-               
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 50),
