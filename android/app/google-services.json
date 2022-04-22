@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "177826183440",
+    "project_id": "naasco-mart-v",
+    "storage_bucket": "naasco-mart-v.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177826183440:android:1cd8f692da276c15cecd95",
+        "android_client_info": {
+          "package_name": "com.mubashirs.app.naascoMart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177826183440-gnr7e9khjvgc1s9i2enso5cdt65rb9hj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADkAPhvuJIwONE9ijS-w83E-SoRxnwgnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177826183440-gnr7e9khjvgc1s9i2enso5cdt65rb9hj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "177826183440-nd98977e965t3685r7civ36l28lucosl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mubashirs.app.naascoMart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
